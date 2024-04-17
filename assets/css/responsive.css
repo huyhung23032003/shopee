@@ -1,0 +1,121 @@
+/* Pc */
+@media (min-width: 1024px){
+    .hide-on-pc{
+        display: none;
+    }
+
+    .header__mobile-search{
+        display: none;
+    }
+}
+/* Mobile & Tablet */
+@media (max-width: 1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+
+    .header{
+        height: 76px;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .pagination-item{
+        margin: 0;
+    }
+    .app__content {
+        padding-top: 125px;
+    }
+
+    .mobile-category{
+        display: block;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+
+    .header__cart {
+        width: 76px;
+        text-align: right;
+    }
+
+    
+    .header__search-list{
+        display: none;
+    }
+
+    .header__search-select:hover .header__search-select{
+        display: block;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px){
+
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .header-with-search{
+        justify-content: space-between;
+    }
+
+    .header__cart,
+    .header__logo{
+        width: unset;
+        /* bỏ chiều width đã setup ở main.css */
+    }
+
+    .header__logo-img{
+        width: 120px;
+    }
+
+    .header__search{
+        position: fixed;
+        top: 76px;
+        right: 0;
+        left: 0;
+        height: 43px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+        animation: mobileSearchSindIn linear 0.5s;
+        display: none;
+    }
+
+    .header__search-list{
+        display: none;
+    }
+
+    @keyframes mobileSearchSindIn {
+        from{
+            top: 38px;
+            opacity: 0;
+        }
+        to{
+            top: 76px;
+            opacity: 1;
+        }
+    }
+
+    .header__search-checkbox:checked ~ .header__search {
+        display: flex;
+    }
+
+    .footer__content{
+        padding-left: 24px;
+    }
+
+    .footer__heading{
+        text-align: center;
+    }
+
+    .footer__dowload,
+    .footer-item__link{
+        justify-content: center;
+    }
+}
